@@ -94,10 +94,15 @@ export default function Footer() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '12px',
         }}
       >
-        <span className="label">© {year} PH NOMAD</span>
-        <span className="label">EDITORIAL GUIDE FOR DIGITAL NOMADS</span>
+        <span className="label">© {year} PH NOMAD — A PROJECT OF ALIVIADO DESIGN</span>
+        <div style={{ display: 'flex', gap: '24px' }}>
+          <Link href="/legal" className="label" style={{ color: 'var(--muted)' }}>LEGAL NOTICE</Link>
+          <Link href="/privacy" className="label" style={{ color: 'var(--muted)' }}>PRIVACY POLICY</Link>
+        </div>
       </div>
     </footer>
   )
