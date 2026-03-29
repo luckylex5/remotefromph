@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllPublishedSlugs, getCities } from '@/lib/supabase/queries'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://remotefromph.com'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ph-nomad.com'
 
 const staticRoutes: MetadataRoute.Sitemap = [
   { url: BASE_URL, changeFrequency: 'daily', priority: 1 },

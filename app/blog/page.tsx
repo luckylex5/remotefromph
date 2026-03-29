@@ -7,8 +7,8 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'Blog — All Dispatches',
-  description: 'All articles, guides, and dispatches from Remote From PH.',
-  alternates: { canonical: 'https://remotefromph.com/blog' },
+  description: 'All articles, guides, and dispatches from PH Nomad.',
+  alternates: { canonical: 'https://ph-nomad.com/blog' },
 }
 
 const CATEGORIES = [
@@ -33,7 +33,7 @@ export default async function BlogPage({
       {/* Header */}
       <div style={{ padding: '64px 0 48px', borderBottom: '1px solid var(--rule)' }}>
         <p className="label" style={{ marginBottom: '16px' }}>
-          REMOTE FROM PH // BLOG
+          PH NOMAD // BLOG
         </p>
         <h1
           style={{

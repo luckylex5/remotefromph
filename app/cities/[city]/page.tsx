@@ -23,7 +23,7 @@ export async function generateMetadata({
     title: `${cityData.name} City Guide`,
     description: cityData.tagline || `Digital nomad guide to ${cityData.name}, Philippines.`,
     alternates: {
-      canonical: `https://remotefromph.com/cities/${cityData.slug}`,
+      canonical: `https://ph-nomad.com/cities/${cityData.slug}`,
     },
   }
 }

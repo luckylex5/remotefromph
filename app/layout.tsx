@@ -35,14 +35,14 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Remote From PH — Work Remote, Live Tropical',
-    template: '%s | Remote From PH',
+    default: 'PH Nomad — Work Remote, Live Tropical',
+    template: '%s | PH Nomad',
   },
   description:
     'The editorial guide for digital nomads in the Philippines. City guides, visa info, tools, and first-person dispatches.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://remotefromph.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ph-nomad.com'),
   openGraph: {
-    siteName: 'Remote From PH',
+    siteName: 'PH Nomad',
     type: 'website',
     locale: 'en_US',
   },

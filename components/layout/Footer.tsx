@@ -30,7 +30,7 @@ export default function Footer() {
               marginBottom: '12px',
             }}
           >
-            REMOTE FROM PH
+            PH NOMAD
           </div>
           <p style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: '1.6' }}>
             The editorial guide for location-independent workers in the Philippines.
@@ -96,7 +96,7 @@ export default function Footer() {
           alignItems: 'center',
         }}
       >
-        <span className="label">© {year} REMOTE FROM PH</span>
+        <span className="label">© {year} PH NOMAD</span>
         <span className="label">EDITORIAL GUIDE FOR DIGITAL NOMADS</span>
       </div>
     </footer>

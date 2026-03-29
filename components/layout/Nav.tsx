@@ -33,7 +33,7 @@ export default function Nav() {
             textDecoration: 'none',
           }}
         >
-          REMOTE FROM PH
+          PH NOMAD
         </Link>
 
         {/* Nav links */}

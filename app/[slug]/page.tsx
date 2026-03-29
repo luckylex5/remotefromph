@@ -42,7 +42,7 @@ export async function generateMetadata({
       publishedTime: post.published_at || undefined,
     },
     alternates: {
-      canonical: `https://remotefromph.com/${post.slug}`,
+      canonical: `https://ph-nomad.com/${post.slug}`,
     },
   }
 }
