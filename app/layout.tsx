@@ -3,6 +3,7 @@ import { Bebas_Neue, DM_Sans, DM_Serif_Display, JetBrains_Mono } from 'next/font
 import './globals.css'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
+import CookieBanner from '@/components/ui/CookieBanner'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   )

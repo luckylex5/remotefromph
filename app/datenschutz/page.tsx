@@ -83,9 +83,15 @@ export default function DatenschutzPage() {
         </section>
 
         <section style={{ borderTop: '1px solid var(--rule)', paddingTop: '40px' }}>
-          <p className="label" style={{ marginBottom: '12px' }}>5. COOKIES</p>
+          <p className="label" style={{ marginBottom: '12px' }}>5. COOKIES & ADVERTISING</p>
+          <p style={{ color: 'var(--ink)', lineHeight: 1.7, margin: '0 0 16px' }}>
+            <strong style={{ color: 'var(--white)' }}>Analytics & advertising cookies:</strong> With your consent, this website uses cookies for web analytics and advertising (Google AdSense, Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). These cookies may collect data about your browsing behaviour to serve personalised ads and measure performance. Google is certified under the EU-U.S. Data Privacy Framework.{' '}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+              policies.google.com/privacy
+            </a>
+          </p>
           <p style={{ color: 'var(--ink)', lineHeight: 1.7, margin: 0 }}>
-            This website does not use cookies for tracking or advertising purposes. No consent banner is required. Technical session cookies may be set by the hosting infrastructure for security purposes only.
+            You can withdraw your consent at any time by clicking "Decline" in the cookie banner or by clearing your browser cookies. Without consent, no tracking or advertising cookies are set. Technical session cookies may be set by the hosting infrastructure for security purposes only and do not require consent.
           </p>
         </section>
 
