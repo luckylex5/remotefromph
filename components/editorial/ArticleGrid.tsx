@@ -17,13 +17,7 @@ export default function ArticleGrid({ posts, variant = 'featured', columns = 3 }
   }
 
   return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        gap: '32px',
-      }}
-    >
+    <div className={columns === 2 ? 'grid-articles-2' : 'grid-articles-3'}>
       {posts.map((post) => (
         <ArticleCard key={post.id} post={post} variant={variant} />
       ))}

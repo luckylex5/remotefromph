@@ -39,6 +39,7 @@ export default function HeroSection({ coverUrl }: HeroSectionProps) {
       }} />
 
       <div
+        className="hero-content"
         style={{
           position: 'relative',
           zIndex: 2,

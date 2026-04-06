@@ -23,19 +23,12 @@ export default async function HomePage() {
       {/* Hero */}
       <HeroSection coverUrl={featured?.cover_url} />
 
-      <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 24px' }}>
+      <div className="page-container">
 
         {/* 01 // CITY DIRECTORY */}
         <section style={{ padding: '64px 0 48px' }}>
           <Divider label="01 // CITY DIRECTORY" />
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '24px',
-              marginTop: '32px',
-            }}
-          >
+          <div className="grid-cities">
             {cities.map((city) => (
               <CityCard key={city.id} city={city} />
             ))}
@@ -50,16 +43,7 @@ export default async function HomePage() {
 
           {/* Featured + Sidebar */}
           {featured && (
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '2fr 1fr',
-                gap: '48px',
-                marginTop: '32px',
-                paddingBottom: '48px',
-                borderBottom: '1px solid var(--rule)',
-              }}
-            >
+            <div className="grid-featured">
               <div>
                 <ArticleCard post={featured} variant="featured" />
               </div>

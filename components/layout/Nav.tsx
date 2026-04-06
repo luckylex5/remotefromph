@@ -1,6 +1,19 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
+
+const links = [
+  { href: '/', label: 'INDEX' },
+  { href: '/blog', label: 'BLOG' },
+  { href: '/cities', label: 'CITIES' },
+  { href: '/visas', label: 'VISAS' },
+  { href: '/tools', label: 'TOOLS' },
+]
 
 export default function Nav() {
+  const [open, setOpen] = useState(false)
+
   return (
     <nav
       style={{
@@ -36,15 +49,9 @@ export default function Nav() {
           PH NOMAD
         </Link>
 
-        {/* Nav links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
-          {[
-            { href: '/', label: 'INDEX' },
-            { href: '/blog', label: 'BLOG' },
-            { href: '/cities', label: 'CITIES' },
-            { href: '/visas', label: 'VISAS' },
-            { href: '/tools', label: 'TOOLS' },
-          ].map(({ href, label }) => (
+        {/* Desktop nav links */}
+        <div className="nav-links">
+          {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
@@ -52,23 +59,21 @@ export default function Nav() {
                 fontFamily: "var(--font-jetbrains), monospace",
                 fontSize: '11px',
                 letterSpacing: '0.1em',
-                textTransform: 'uppercase' as const,
+                textTransform: 'uppercase',
                 color: 'var(--muted)',
                 textDecoration: 'none',
               }}
-              className="nav-link"
             >
               {label}
             </Link>
           ))}
-
           <Link
             href="#newsletter"
             style={{
               fontFamily: "var(--font-jetbrains), monospace",
               fontSize: '11px',
               letterSpacing: '0.1em',
-              textTransform: 'uppercase' as const,
+              textTransform: 'uppercase',
               backgroundColor: 'var(--accent)',
               color: 'var(--white)',
               padding: '8px 16px',
@@ -78,6 +83,29 @@ export default function Nav() {
             SUBSCRIBE
           </Link>
         </div>
+
+        {/* Hamburger button (mobile only) */}
+        <button
+          className="nav-hamburger"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <div className={`nav-mobile-menu${open ? ' open' : ''}`}>
+        {links.map(({ href, label }) => (
+          <Link key={href} href={href} onClick={() => setOpen(false)}>
+            {label}
+          </Link>
+        ))}
+        <Link href="#newsletter" className="subscribe" onClick={() => setOpen(false)}>
+          SUBSCRIBE
+        </Link>
       </div>
     </nav>
   )
