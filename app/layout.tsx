@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
   },
+  other: {
+    monetag: 'd27937014ca8a70da332d7b2d7882910',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
