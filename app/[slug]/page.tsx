@@ -57,7 +57,8 @@ export default async function ArticlePage({
   if (!post) notFound()
 
   const [html, related] = await Promise.all([
-    post.body ? markdownToHtml(post.body) : Promise.resolve(post.body_html || ''),
+    // The page header already renders the title as H1, so drop a leading "# Title" from the body
+    post.body ? markdownToHtml(post.body.replace(/^\s*#\s+[^\n]*\n+/, '')) : Promise.resolve(post.body_html || ''),
     getPublishedPosts(4, post.category),
   ])
 
