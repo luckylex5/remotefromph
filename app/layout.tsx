@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, DM_Sans, DM_Serif_Display, JetBrains_Mono } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
 import Nav from '@/components/layout/Nav'
