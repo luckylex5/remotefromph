@@ -49,9 +49,6 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
   },
-  other: {
-    monetag: 'd27937014ca8a70da332d7b2d7882910',
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -71,13 +68,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3338446289833421"
           crossOrigin="anonymous"
           strategy="afterInteractive"
-        />
-        <Script
-          id="monetag-zone"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(s){s.dataset.zone='11668275',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`,
-          }}
         />
       </body>
     </html>
