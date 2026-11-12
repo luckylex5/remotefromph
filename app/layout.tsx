@@ -57,18 +57,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${bebasNeue.variable} ${dmSans.variable} ${dmSerifDisplay.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3338446289833421"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <Nav />
         <main>{children}</main>
         <Footer />
         <CookieBanner />
         <Analytics />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3338446289833421"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   )
